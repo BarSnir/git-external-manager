@@ -1,0 +1,12 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  alpine_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: alpine_container
+    restart: always
+    volumes:
+    - .:/repo
