@@ -13,6 +13,7 @@ Create ```.env``` file from .env.example template
 3.```git remote set-url origin https://<github_token>@github.com/<github_user_name>/<github_repo_name>.git```
 
 ## Usages:
+```./script.sh```
 ```docker compose exec -it alpine_container bash```
 And just use the Git CLI.
 
