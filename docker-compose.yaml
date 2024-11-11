@@ -6,6 +6,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+      - GITHUB_EMAIL=${GITHUB_EMAIL}
+      - GITHUB_USER=${GITHUB_USER}
+      - GITHUB_REPO=${GITHUB_REPO}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
     container_name: alpine_container
     restart: always
     env_file:
