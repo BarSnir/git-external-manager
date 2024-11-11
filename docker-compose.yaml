@@ -8,6 +8,7 @@ services:
       dockerfile: Dockerfile
     container_name: alpine_container
     restart: always
+    command: ["./script.sh"]
     env_file:
       - .env
     volumes:
