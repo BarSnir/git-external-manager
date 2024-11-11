@@ -8,5 +8,7 @@ services:
       dockerfile: Dockerfile
     container_name: alpine_container
     restart: always
+    env_file:
+      - .env
     volumes:
     - .:/repo
