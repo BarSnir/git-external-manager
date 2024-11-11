@@ -8,9 +8,11 @@ Create ```.env``` file from .env.example template
 ```Docker compose up -d```
 
 ## Config:
-1.```git config --global user.email "<github_email>"```
-2.```git config --global user.name "<github_user_name>"```
-3.```git remote set-url origin https://<github_token>@github.com/<github_user_name>/<github_repo_name>.git```
+1. ``` 
+    git config --global user.email ${GITHUB_EMAIL} && \
+    git config --global user.name ${GITHUB_USER} && \
+    git remote set-url origin https://${GITHUB_TOKEN}@github.com/${GITHUB_USER}/${GITHUB_REPO}.git
+    ```
 
 ## Usages:
 ```./script.sh```
