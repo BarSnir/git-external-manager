@@ -8,5 +8,5 @@
 ## Run:
 ```docker compose up -d```
 
-## Access to Git CLI
+## Access to Git CLI:
 ```docker compose exec -it alpine_container zsh``` + Ctrl+C (Its  a bug)
