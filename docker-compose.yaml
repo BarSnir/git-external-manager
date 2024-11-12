@@ -17,4 +17,4 @@ services:
     env_file:
       - .env
     volumes:
-    - .:/repo
+    - ${REPO_LOCAL_PATH}:/repo

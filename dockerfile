@@ -2,7 +2,8 @@
 FROM alpine:latest
 
 RUN mkdir repo && cd repo
-WORKDIR /repo
+COPY ${REPO_LOCAL_PATH} .
+
 
 ARG GITHUB_EMAIL
 ARG GITHUB_USER
@@ -10,8 +11,6 @@ ARG GITHUB_REPO
 ARG GITHUB_TOKEN
 ARG REPO_LOCAL_PATH
 
-
-COPY ${REPO_LOCAL_PATH} .
 
 # Update package list and install bash, curl, and git
 RUN apk update && \
