@@ -3,6 +3,10 @@ version: '3.8'
 
 services:
   alpine_service:
+    container_name: alpine_container
+    restart: always
+    env_file:
+      - .env
     build:
       context: .
       dockerfile: Dockerfile
@@ -12,9 +16,5 @@ services:
       - GITHUB_REPO=${GITHUB_REPO}
       - GITHUB_TOKEN=${GITHUB_TOKEN}
       - REPO_LOCAL_PATH=${REPO_LOCAL_PATH}
-    container_name: alpine_container
-    restart: always
-    env_file:
-      - .env
     volumes:
     - ${REPO_LOCAL_PATH}:/repo
