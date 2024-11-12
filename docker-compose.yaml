@@ -11,6 +11,7 @@ services:
       - GITHUB_USER=${GITHUB_USER}
       - GITHUB_REPO=${GITHUB_REPO}
       - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - REPO_LOCAL_PATH=${REPO_LOCAL_PATH}
     container_name: alpine_container
     restart: always
     env_file:
