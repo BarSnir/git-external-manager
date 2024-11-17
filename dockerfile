@@ -9,7 +9,7 @@ ARG REPO_LOCAL_PATH
 
 RUN mkdir repo && cd repo
 WORKDIR /repo
-COPY ${REPO_LOCAL_PATH} .
+COPY . .
 
 # Update package list and install bash, curl, and git
 RUN apk update && \

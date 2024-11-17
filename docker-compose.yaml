@@ -9,7 +9,7 @@ services:
       - .env
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
       args:
       - GITHUB_EMAIL=${GITHUB_EMAIL}
       - GITHUB_USER=${GITHUB_USER}
